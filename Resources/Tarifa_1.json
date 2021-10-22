@@ -1,0 +1,92 @@
+{
+    "description": "Periodo 1",
+    "vigencia":{
+        "inicio": "01/02/2021",
+        "final" : "03/04/2021"
+    },
+    "tarifas":{
+        "T1":{
+            "nombre": "base",
+            "inicio_1": "00:00",
+            "final_1": "05:59",
+            "inicio_2": null,
+            "final_2": null,
+            "inicio_3": null,
+            "final_3": null
+        },
+        "T2":{
+            "nombre": "intermedia",
+            "inicio_1": "06:00",
+            "final_1": "19:29",
+            "inicio_2": "22:30",
+            "final_2": "23:59",
+            "inicio_3": null,
+            "final_3": null
+        },
+        "T3":{
+            "nombre": "punta",
+            "inicio_1": "19:30",
+            "final_1": "22:29",
+            "inicio_2": null,
+            "final_2": null,
+            "inicio_3": null,
+            "final_3": null
+        },
+        "T4":{
+            "nombre": "baseSabado",
+            "inicio_1": "00:00",
+            "final_1": "06:59",
+            "inicio_2": null,
+            "final_2": null,
+            "inicio_3": null,
+            "final_3": null
+        },
+        "T5":{
+            "nombre": "intermediaSabado",
+            "inicio_1": "07:00",
+            "final_1": "23:59",
+            "inicio_2": null,
+            "final_2": null,
+            "inicio_3": null,
+            "final_3": null
+        },
+        "T6":{
+            "nombre": "puntaSabado",
+            "inicio_1": null,
+            "final_1": null,
+            "inicio_2": null,
+            "final_2": null,
+            "inicio_3": null,
+            "final_3": null
+        },
+        "T7":{
+            "nombre": "baseDomingo",
+            "inicio_1": "00:00",
+            "final_1": "18:59",
+            "inicio_2": "23:00",
+            "final_2": "23:59",
+            "inicio_3": null,
+            "final_3": null
+        },
+        "T8":{
+            "nombre": "intermediaDomingo",
+            "inicio_1": "19:00",
+            "final_1": "22:59",
+            "inicio_2": null,
+            "final_2": null,
+            "inicio_3": null,
+            "final_3": null
+        },
+        "T9":{
+            "nombre": "puntaDomingo",
+            "inicio_1": null,
+            "final_1": null,
+            "inicio_2": null,
+            "final_2": null,
+            "inicio_3": null,
+            "final_3": null
+        }
+
+    }
+
+}
