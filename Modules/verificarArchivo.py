@@ -1,3 +1,9 @@
+#*********************************************************************************************************************
+#   Verifica que el archivo a procesar contenga la secuencia adecuada, los timestamos de inicio y final sean correctos 
+#   Identifica secuencias de cambio de horario verano-invierno
+#   Elimina los datos no necesarios para el calculo de la DMF 
+#*********************************************************************************************************************
+
 import pandas as pd 
 import datetime as dt
 from datetime import timedelta

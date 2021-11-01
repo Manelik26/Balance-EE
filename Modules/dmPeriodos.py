@@ -1,5 +1,5 @@
 import pandas as pd
-pd.set_option('mode.chained_assignment', None)
+pd.set_option('mode.chained_assignment', None) #Asignacion encadenada 'None'
 def calDM (FileB):
 
     miTarifa =[]

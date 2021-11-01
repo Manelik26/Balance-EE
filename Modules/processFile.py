@@ -2,6 +2,10 @@ import pandas as pd
 import datetime as dt
 
 def processF (File, Tarifa, fest):
+
+    #******************************************************************************************************************
+    # Procesa la variable depurada incluyendo el calculo previo de la DMF 
+    #******************************************************************************************************************
     
     miTarifa =[]
     FIFO =[]
@@ -30,6 +34,10 @@ def processF (File, Tarifa, fest):
     return File
 
 def seleccionTarifa (File, Tarifa,fest):
+
+    #*******************************************************************************************************************
+    #   Selecciona a que periodo del año pertenece el time stamp de los registros de la linea leida
+    #++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
     periodo_1_inicio = dt.datetime.strptime(Tarifa[0]['vigencia']['inicio'],'%d/%m/%Y' )
     periodo_1_final = dt.datetime.strptime(Tarifa[0]['vigencia']['final'], '%d/%m/%Y') + dt.timedelta(days =1)
@@ -99,14 +107,14 @@ def seleccionTarifa (File, Tarifa,fest):
         
         #Verificacion periodo 3
         if element >= periodo_3_inicio and element < periodo_3_final:
-            print('en tercer periodo')
+            #print('en tercer periodo')
             periodo = selTarifaHora(element,T3,fest)
             columnaPeriodo.append(periodo)
             continue
         
         #Verificacion periodo 4
         if element >= periodo_4_inicio and element < periodo_4_final:
-            print('en cuarto periodo')
+            #print('en cuarto periodo')
             periodo = selTarifaHora(element,T4,fest)
             columnaPeriodo.append(periodo)
             continue
@@ -117,7 +125,8 @@ def seleccionTarifa (File, Tarifa,fest):
     
 
 def selTarifaHora( registro, periodoHoraT , fest):
-           
+    #*******************************************************************************************************************
+    #   Deterrmina a que periodo tarifario pertenece cada time stamp (BASE, INTERMEDIA, PUNTA)
     pvPeriodoHoraT = pd.DataFrame(periodoHoraT, columns =['tarifa', 'inicio_1','final_1', 'inicio_2', 'final_2', 'inicio_3', 'final_3'])
     diaSemana = dt.datetime.isoweekday(registro)
     ## Pendiente verificar dia festivo 

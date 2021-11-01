@@ -52,9 +52,9 @@ for linea in infile:
 pathSalida=pathFile[:-4]+'_proc.xlsx'
 infile.close()
 print('\n','Procesando... ','\n')
-archivoVerificado=verificarArchivo.verificarFile(mainFile)
+archivoVerificado=verificarArchivo.verificarFile(mainFile)  #Guarda el archivo depurado en una nueva variable 
 
-if type(archivoVerificado) != pd.core.frame.DataFrame:
+if type(archivoVerificado) != pd.core.frame.DataFrame:      #Identifica si es una dataframe de pandas 
     exit()
 
 print(emoji.emojize('Archivo verificado :thumbs_up:'))
@@ -62,7 +62,7 @@ print(' ')
 
 
 
-File=processFile.processF(archivoVerificado,Tarifa,fest)
+File=processFile.processF(archivoVerificado,Tarifa,fest)    
 
 print('Guardando archivo de excel...')
 print('Guardando Hoja GPK...')

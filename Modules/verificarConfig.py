@@ -1,3 +1,8 @@
+
+#*******************************************************************************************************************
+# Verifica archivo de configuracion de periodos tarifarios 
+#*******************************************************************************************************************
+
 import emoji
 from datetime import datetime
 import Modules.tablaVerdad as TV
